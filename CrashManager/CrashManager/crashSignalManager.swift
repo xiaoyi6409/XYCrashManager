@@ -16,9 +16,14 @@ import UIKit
         
         var mstr = String()
         mstr += "Stack:\n"
+        //增加偏移量地址
+        mstr = mstr.appendingFormat("slideAdress:0x%0x\r\n", calculate())
+        //增加错误信息
         for symbol in Thread.callStackSymbols {
-            mstr = mstr.appendingFormat("%@\r\n", symbol);
+            mstr = mstr.appendingFormat("%@\r\n", symbol)
         }
+        
+
         CrashManager.saveCrash(appendPathStr: .signalCrashPath, exceptionInfo: mstr)
         exit(signal)
 

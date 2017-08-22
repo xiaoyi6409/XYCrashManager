@@ -17,6 +17,7 @@
 		418158381F43ED2D00C02BA7 /* CrashManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418158351F43ED2D00C02BA7 /* CrashManager.swift */; };
 		418158391F43ED2D00C02BA7 /* crashNSExceptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418158361F43ED2D00C02BA7 /* crashNSExceptionManager.swift */; };
 		4181583A1F43ED2D00C02BA7 /* crashSignalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418158371F43ED2D00C02BA7 /* crashSignalManager.swift */; };
+		41B9E3DA1F4BCC8B00A6DA3B /* SlideAdressTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B9E3D91F4BCC8B00A6DA3B /* SlideAdressTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,10 @@
 		418158351F43ED2D00C02BA7 /* CrashManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrashManager.swift; sourceTree = "<group>"; };
 		418158361F43ED2D00C02BA7 /* crashNSExceptionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = crashNSExceptionManager.swift; sourceTree = "<group>"; };
 		418158371F43ED2D00C02BA7 /* crashSignalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = crashSignalManager.swift; sourceTree = "<group>"; };
+		418FB4351F45409900BD4443 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		41B9E3D81F4BCC8B00A6DA3B /* SlideAdressTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideAdressTool.h; sourceTree = "<group>"; };
+		41B9E3D91F4BCC8B00A6DA3B /* SlideAdressTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideAdressTool.m; sourceTree = "<group>"; };
+		41B9E3DB1F4BCEEF00A6DA3B /* CrashManager_Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrashManager_Bridging_Header.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +92,7 @@
 				4181581A1F43ECFD00C02BA7 /* CrashManagerTests */,
 				418158251F43ECFD00C02BA7 /* CrashManagerUITests */,
 				418158041F43ECFD00C02BA7 /* Products */,
+				418FB4341F45409800BD4443 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +112,7 @@
 				418158341F43ED2D00C02BA7 /* CrashManager */,
 				418158061F43ECFD00C02BA7 /* AppDelegate.swift */,
 				418158081F43ECFD00C02BA7 /* ViewController.swift */,
+				41B9E3DB1F4BCEEF00A6DA3B /* CrashManager_Bridging_Header.h */,
 				4181580A1F43ECFD00C02BA7 /* Main.storyboard */,
 				4181580D1F43ECFD00C02BA7 /* Assets.xcassets */,
 				4181580F1F43ECFD00C02BA7 /* LaunchScreen.storyboard */,
@@ -135,11 +142,21 @@
 		418158341F43ED2D00C02BA7 /* CrashManager */ = {
 			isa = PBXGroup;
 			children = (
+				41B9E3D81F4BCC8B00A6DA3B /* SlideAdressTool.h */,
+				41B9E3D91F4BCC8B00A6DA3B /* SlideAdressTool.m */,
 				418158351F43ED2D00C02BA7 /* CrashManager.swift */,
 				418158361F43ED2D00C02BA7 /* crashNSExceptionManager.swift */,
 				418158371F43ED2D00C02BA7 /* crashSignalManager.swift */,
 			);
 			path = CrashManager;
+			sourceTree = "<group>";
+		};
+		418FB4341F45409800BD4443 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				418FB4351F45409900BD4443 /* MessageUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,7 +227,7 @@
 				TargetAttributes = {
 					418158021F43ECFD00C02BA7 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 42QJKZ7N27;
+						DevelopmentTeam = HUV9FHB9EV;
 						ProvisioningStyle = Automatic;
 					};
 					418158161F43ECFD00C02BA7 = {
@@ -280,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4181583A1F43ED2D00C02BA7 /* crashSignalManager.swift in Sources */,
+				41B9E3DA1F4BCC8B00A6DA3B /* SlideAdressTool.m in Sources */,
 				418158391F43ED2D00C02BA7 /* crashNSExceptionManager.swift in Sources */,
 				418158091F43ECFD00C02BA7 /* ViewController.swift in Sources */,
 				418158381F43ED2D00C02BA7 /* CrashManager.swift in Sources */,
@@ -435,11 +453,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 42QJKZ7N27;
+				DEVELOPMENT_TEAM = HUV9FHB9EV;
 				INFOPLIST_FILE = CrashManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xiaoyi.CrashManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/CrashManager/CrashManager_Bridging_Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -448,11 +467,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 42QJKZ7N27;
+				DEVELOPMENT_TEAM = HUV9FHB9EV;
 				INFOPLIST_FILE = CrashManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xiaoyi.CrashManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/CrashManager/CrashManager_Bridging_Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -534,6 +554,7 @@
 				4181582D1F43ECFD00C02BA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4181582E1F43ECFD00C02BA7 /* Build configuration list for PBXNativeTarget "CrashManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +563,7 @@
 				418158301F43ECFD00C02BA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		418158311F43ECFD00C02BA7 /* Build configuration list for PBXNativeTarget "CrashManagerUITests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +572,7 @@
 				418158331F43ECFD00C02BA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

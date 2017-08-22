@@ -21,7 +21,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         crashHandle { (crashInfoArr) in
             print(crashInfoArr.count)
             for info in crashInfoArr{
-                print(info)
+                //将上一次崩溃信息显示在屏幕上
+                DispatchQueue.main.async {
+                    let infoLabel = UITextView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
+                    infoLabel.backgroundColor = .gray
+                    infoLabel.textColor = .white
+                    infoLabel.isEditable = false
+                    infoLabel.text = info
+
+                    UIApplication.shared.keyWindow?.addSubview(infoLabel)
+                }
+              
             }
         }
         
